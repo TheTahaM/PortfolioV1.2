@@ -577,6 +577,12 @@ select.form-control {
     rgba(var(--color-success-rgb, 33, 128, 141), var(--status-border-opacity));
 }
 
+/* Hide accessibility controls */
+#accessibilityControls {
+  display: none !important;
+}
+
+
 .status--error {
   background-color: rgba(
     var(--color-error-rgb, 192, 21, 47),
