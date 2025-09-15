@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taha's Pen store</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Ensure the path is correct -->
+    <style>
+        body {
+            background-color: rgb(228, 228, 228);
+            color: rgba(0, 0, 0, 0.717);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .top-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .product-description {
+            margin-top: 80px;
+            padding: 20px;
+        }
+        .buy-now {
+            background-color: rgb(233, 200, 167);
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .reviews {
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid white;
+            text-align: center; /* Center the text */
+        }
+        .product-container {
+            display: flex;
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
+            margin-top: 20px; /* Adjust as needed */
+        }
+        .product-image {
+            margin-top: 80px; /* Adjust as needed */
+            max-width: 20%; /* Adjust this value to control the image size */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 20px; /* Space between image and description */
+        }
+        #topBar {
+            font-family: 'Trebuchet MS', sans-serif; /* Set font to Trebuchet MS */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px; /* Height of the top bar */
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            color: rgba(255, 255, 255, 0.225);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+            z-index: 100; /* Ensure it is above other elements */
+            backdrop-filter: blur(10px); /* Apply blur effect */
+        }
+
+        #topBar a {
+            color: rgba(255, 255, 255, 0.577);
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        .reviews {
+            text-align: center; /* Center the text */
+            margin-top: 40px; /* Adjust as needed */
+        }
+
+        #topBar .about-link {
+            color: rgba(255, 255, 255, 0.769); /* Change color to blue for About link */
+        }
+    </style>
+    <script>
+        function showMessage() {
+            alert("This was only for fun, I don't actually sell pens.");
+        }
+    </script>
+</head>
+<body>
+
+    <div id="topBar">
+        <a href="/index.html">Home</a> <!-- Updated link to point to local store.html -->
+        <a href="/about.html" class="about-link" aria-label="Learn more about us">About</a> <!-- Updated link -->
+        <a href="/store.html">Store</a> <!-- Updated link to point to local store.html -->
+    </div>
+
+    <div class="product-container">
+        <img src="productJPG.jpg" alt="Elegant Fountain Pen" class="product-image">
+        <div class="product-description">
+            <h2>Taha's Pen</h2>
+            <p>This exquisite fountain pen is crafted with the finest materials, offering a smooth writing experience and a touch of luxury to your everyday tasks.
+                <br>Actually, it's just a business exercise / portfolio piece either way, it's a nice looking pen.
+            </p>
+            <button class="buy-now" onclick="showMessage()">Buy Now</button>
+        </div>
+    </div>
+
+    <div class="reviews">
+        <h3>Customer Reviews</h3>
+        <p>⭐⭐⭐⭐⭐ "Absolutely stunning! The best pen I've ever owned!" - Not a bot</p>
+    </div>
+
+</body>
+</html>

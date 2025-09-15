@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Taha's Pen</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <h2>Loading Animation</h2>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="loading-stats" id="loadingStats">
+                <span id="loadedCount">0</span> / <span id="totalCount">143</span> frames loaded
+            </div>
+            <div class="connection-info" id="connectionInfo"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>Taha's Pen</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="store.html" class="nav-link">Store</a></li>
+            </ul>
+            <ul class="nav-menu-mobile">
+                <li><a href="#" class="nav-link">IRL Anti-Virus Website</a></li>
+                <li><a href="#" class="nav-link">Hangman Game</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Canvas Container -->
+        <div class="canvas-container" id="canvasContainer">
+            <canvas id="animationCanvas" class="animation-canvas"></canvas>
+            
+            <!-- Overlay Text -->
+            <div class="overlay-text" id="overlayText">
+                <h1>Taha's Pen</h1>
+                <p>Scroll to explore</p>
+            </div>
+
+            <!-- Performance Stats (hidden by default) -->
+            <div class="performance-stats" id="performanceStats">
+                <div>Frame: <span id="currentFrame">1</span>/143</div>
+                <div>FPS: <span id="fps">0</span></div>
+                <div>Scroll: <span id="scrollPercent">0</span>%</div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- End Message -->
+    <div class="end-message" id="endMessage">
+        <h2>FIN.</h2>
+        <p>Version 1.1 | <a href="about.html" class="end-link">About</a> | <a href="store.html" class="end-link">Store</a></p>
+    </div>
+
+    <!-- Error Modal -->
+    <div class="modal hidden" id="errorModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Loading Error</h3>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="errorMessage">Some images failed to load. The animation may not be smooth.</p>
+                <div class="modal-actions">
+                    <button class="btn btn--secondary" id="retryButton">Retry Loading</button>
+                    <button class="btn btn--primary" id="continueButton">Continue Anyway</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accessibility Settings -->
+    <div class="accessibility-controls" id="accessibilityControls">
+        <button class="btn btn--sm btn--outline" id="reducedMotionToggle">
+            <span id="motionText">Disable Animation</span>
+        </button>
+        <button class="btn btn--sm btn--outline" id="performanceToggle">
+            <span id="perfText">Show Stats</span>
+        </button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
